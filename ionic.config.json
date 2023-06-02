@@ -1,0 +1,7 @@
+{
+  "name": "encry-data",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

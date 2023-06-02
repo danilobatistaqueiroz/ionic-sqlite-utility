@@ -1,0 +1,8 @@
+{
+	"appId": "br.labs.encrypdata",
+	"appName": "encry-data",
+	"webDir": "www",
+	"server": {
+		"androidScheme": "https"
+	}
+}
