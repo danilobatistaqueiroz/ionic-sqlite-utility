@@ -1,8 +1,18 @@
 {
-	"appId": "br.labs.encrypdata",
-	"appName": "encry-data",
+	"appId": "br.labs.securityp",
+	"appName": "secure-products",
 	"webDir": "www",
 	"server": {
 		"androidScheme": "https"
-	}
+	},
+  "plugins": {
+    "CapacitorSQLite": {
+      "androidIsEncryption": true,
+      "androidBiometric": {
+        "biometricAuth": false,
+        "biometricTitle": "Biometric login for capacitor sqlite",
+        "biometricSubTitle": "Log in using your biometric"
+      }
+    }
+  }
 }

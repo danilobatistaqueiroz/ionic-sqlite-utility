@@ -1,7 +1,7 @@
 {
-  "name": "crypto-data",
+  "name": "security-products",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "danilobatistaqueiroz",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -21,14 +21,22 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@capacitor-community/sqlite": "^5.0.1",
+    "@capacitor/android": "5.0.4",
     "@capacitor/app": "5.0.2",
     "@capacitor/core": "5.0.4",
+    "@capacitor/filesystem": "^5.0.4",
     "@capacitor/haptics": "5.0.2",
     "@capacitor/keyboard": "5.0.2",
     "@capacitor/status-bar": "5.0.2",
+    "@capacitor/toast": "^5.0.4",
     "@ionic/angular": "^7.0.0",
+    "@ionic/pwa-elements": "^3.1.1",
+    "hijack-sqlite": "link:/home/element/dados/tutorials/ionic/plugins/hijack-sqlite",
     "ionicons": "^7.0.0",
+    "jeep-sqlite": "^2.3.6",
     "rxjs": "~7.8.0",
+    "sql.js": "^1.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
@@ -64,5 +72,5 @@
     "ts-node": "^8.3.0",
     "typescript": "~5.0.2"
   },
-  "description": "An Ionic project"
+  "description": "A sample app using sqlite encrypted data"
 }

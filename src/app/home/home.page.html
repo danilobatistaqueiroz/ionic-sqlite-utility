@@ -1,20 +1,65 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Secure Products Corporation
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="isAndroid" (click)="exitApp()">
+        <ion-icon slot="icon-only" color="danger" name="exit-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="success" (click)="startSqlite()">Iniciar o Sqlite</ion-button>
+        <ion-button color="success" (click)="closeDatabase()">Fechar o Sqlite</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" (click)="clearPassphrase()">Limpar a passphrase</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" (click)="changePassphrase()">Mudar a passphrase</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" (click)="checkPassphrase()">Verificar a passphrase</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="dark" (click)="copyToDocuments()">Copiar para Documents</ion-button>
+        <ion-button color="secondary" (click)="copyToUserData()">Copiar para user data</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="medium" (click)="isSecretStored()">Is secret stored</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" (click)="deleteDatabase()">Deletar o banco de dados</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger" (click)="insertProduct('MotoG8','Morotola',150000)">Inserir Produto</ion-button>
+        <ion-button color="danger" (click)="insertProduct('Xamarin X','Microsoft',100)">Inserir Xamarin</ion-button>
+        <ion-button color="danger" (click)="insertProduct('Pixel Fold','Google',100)">Inserir Pixel Fold</ion-button>
+        <ion-button color="warning" (click)="getAllProducts()">Consultar Produtos</ion-button>
+        <div *ngFor="let product of products">
+          {{product.name}} - {{product.price}}
+        </div>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
 </ion-content>
